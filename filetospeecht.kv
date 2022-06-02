@@ -1,0 +1,30 @@
+filetospeech:
+
+<filetospeech>:
+    cols: 3
+
+    BoxLayout:
+
+        TextInput:
+            text:"entrer le fichier ici "
+            multiline:False
+            on_text_validate: root.filepassing(self)
+        BoxLayout:
+            TextInput:
+
+                text:"female or male"
+                multiline:False
+                on_text_validate: root.genderpassing(self)
+            TextInput:
+
+                text:"French or  English (United States)"
+                multiline:False
+                on_text_validate: root.laungpassing(self)
+
+
+    Button:
+        text:"clicker sur button pour txttospeech"
+        color:1,0,0,1
+        size_hint:None,None
+        size: "300dp","1000dp"
+        on_press : root.filetosound3(root.lt,root.gt,root.ft)

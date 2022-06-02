@@ -1,0 +1,27 @@
+txttospeech:
+
+<txttospeech>:
+    cols:3
+    TextInput:
+            text:"entrer le text ici "
+            multiline:False
+            on_text_validate: root.xfilepassing(self)
+    BoxLayout:
+        TextInput:
+
+            text:"female or male"
+            multiline:False
+            on_text_validate: root.xgenderpassing(self)
+        TextInput:
+
+
+
+            text:"French or  English (United States)"
+            multiline:False
+            on_text_validate: root.xlaungpassing(self)
+    Button:
+            text:"clicker sur button pour txttospeech"
+            color:0.5,0,0.5,1
+            size_hint:None,None
+            size: "300dp","1000dp"
+            on_press : root.texttosound3(root.ltx,root.gtx,root.ftx)
